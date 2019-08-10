@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<title>
+VisualizeMyData
+</title>
+</head>
+<body>
+<div class="container">
+<center style="margin-top:20px"><h1>VisualizeMyData</h1></center>
+<form action="http://localhost:5000/VisualizeMyData/logout" style="float:right"><button class="btn btn-primary" type="submit">Log Out</button></form>
+</div>
+<div class="container" style="margin-top:30px">
+<div class="row justify-content-md-center">
+<div class="col-sm-4">
+<table class="table table-bordered">
+<thead><tr><th>Tables</th></tr></thead>
+<tbody>
+{% for name in tables %}
+<tr>
+<td><a href="http://localhost:5000/databases/{{ database }}/{{ name[0] }}"> {{ name[0] }} </a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script>
+</script>
+</body>
+</html>

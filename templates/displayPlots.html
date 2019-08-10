@@ -55,7 +55,7 @@ VisualizeMyData
 <div class="form-group">
 <input type="hidden" name="database" value="{{ database }}">
 <input type="hidden" name="table" value="{{ table }}">
-<button type="button" onclick="executeSQL();" class="btn btn-primary">Plot</button>
+<button type="button" onclick="getGraph();" class="btn btn-primary">Plot</button>
 </div>
 </form>
 
@@ -72,7 +72,7 @@ VisualizeMyData
 </div>
 </div>
 <script>
-function executeSQL()
+function getGraph()
 {
 var http = new XMLHttpRequest();
 var url = 'http://localhost:5000/execute';
